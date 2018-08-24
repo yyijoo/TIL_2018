@@ -90,5 +90,36 @@
 
    
 
+5. Table of contents
+
+   문법
+
+   ```
+   [TOC]
+   ```
+
+   결과
+
+   [TOC]
+
+
+
+
+6. Link
+
+   문법
+
+   ```
+   [insert text](http://google.com)
+   ```
+
+   결과
+
+   [insert text](http://google.com)
+
+   
+
+
+
 TBD...
 

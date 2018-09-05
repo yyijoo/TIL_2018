@@ -6,14 +6,46 @@
 
 
 
-## HTML 기본 용어 & 개념
+## HTML & CSS 기본 용어 & 개념
 
 HTML은 문서 내용이 무엇인지 정의하고 구조화한다. 
+
+- HTML의 목적은 보기좋게 꾸미는 게 아니라 문서 각 파트의 '의미'를 잘 전달하는 거다.
+
 CSS는 해당 문서를 폰트나 컬러 등을 활용해 꾸민다.
 
 - elements는 페이지 안의 구조와 콘텐츠의 목적을 알려주는 지표다. 시작 태그와 종료 태그로 이루어진 모든 명령어. 
+
 - tags는 elements의 일부로 시작 태그와 종료 태그 두 종류가 있음.
+
 - attributes는 element에 대한 추가 정보를 제공하는 속성. attribute는 시작 태그 안에 element의 이름 뒤에 들어온다.
+
+- Selector는 정확히 어떤 element를 꾸며줄 건지 알려주는 것. 
+
+  - Type Selector는 같은 element 타입에 모두 동일 style 적용 
+
+  - Class Selector는 element와 상관없이 그룹을 나눠 그룹별 style 적용. Class를 만들어 원하는 element에 class를 부여. 다른 element라도 동일 class가 적용될 수 있음. 한 element에 2개 이상의 class 설정할 수 있음.
+
+    ```
+    <h1 class="red italic"> Hello world </h1>
+    .red { color : red }
+    .italic { font-style: italic }
+    ```
+
+  - Id Selector는 각각의 element에 고유한 ID를 부여함으로써, ID별 style을 적용할 수 있게해줌. 단 하나의 element가 유일한 ID 하나만 적용할 수 있음.
+
+    ```
+    <h1 id="hello"> Hello world </h1>
+    <h1 id="code">code states</h1>
+    ```
+
+    
+
+- Properties는 지정된 selector의 어떤 성분을 설정할 건지 알려주는 것.
+
+- Values는 property를 어떻게 설정해줄 건지!
+
+
 
 
 
@@ -96,39 +128,6 @@ self-closing elements
 <b>, <font>, <center> 등은 권장하지 않는다 왜냐면..
 
 
-
-
-
-
-
-## CSS 기본 용어 & 개념
-
-
-
-- Selector는 정확히 어떤 element를 꾸며줄 건지 알려주는 것. 
-
-  - Type Selector는 같은 element 타입에 모두 동일 style 적용 
-
-  - Class Selector는 element와 상관없이 그룹을 나눠 그룹별 style 적용. Class를 만들어 원하는 element에 class를 부여. 다른 element라도 동일 class가 적용될 수 있음. 한 element에 2개 이상의 class 설정할 수 있음.
-
-    ```
-    <h1 class="red italic"> Hello world </h1>
-    .red { color : red }
-    .italic { font-style: italic }
-    ```
-
-  - Id Selector는 각각의 element에 고유한 ID를 부여함으로써, ID별 style을 적용할 수 있게해줌. 단 하나의 element가 유일한 ID 하나만 적용할 수 있음.
-
-    ```
-    <h1 id="hello"> Hello world </h1>
-    <h1 id="code">code states</h1>
-    ```
-
-    
-
-- Properties는 지정된 selector의 어떤 성분을 설정할 건지 알려주는 것.
-
-- Values는 property를 어떻게 설정해줄 건지!
 
 
 

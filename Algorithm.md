@@ -57,7 +57,11 @@ Program.assertEqual(doSearch(primes, 73), 20);
 
 ### 재귀 알고리즘 (Recursive Algorithm)
 
-어떤 문제를 해결하려고 할 때, 동일한 문제의 더 작은 경우를 해결함으로써 그 문제를 해결하는 것. 복잡한 문제를 쪼개고 쪼개서 즉시 풀 수 있는 문제로 작아지게 만든다. 
+- 어떤 문제를 해결하려고 할 때, 동일한 문제의 더 작은 경우를 해결함으로써 그 문제를 해결하는 것. 복잡한 문제를 쪼개고 쪼개서 즉시 풀 수 있는 문제로 작아지게 만든다. 
+
+- 모든 recursion은 iteration으로 변경할 수 있다. ( 참고 https://stackoverflow.com/questions/931762/can-every-recursion-be-converted-into-iteration
+
+모든 트리구조는 recursion으로 변경할 수 있다.
 
 
 

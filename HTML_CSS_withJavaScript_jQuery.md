@@ -89,7 +89,7 @@ self-closing elements
 
 ### HTML 콘텐츠 관련 태그
 
-- <div> vs. <span>
+- div 요소 vs span 요소
 
   div는 가로폭 모두 차지. span은 태그 안의 내용만 차지.
 
@@ -97,45 +97,17 @@ self-closing elements
 
   div와 span은 HTML 태그이나 의미 전달이 목적 아님. 스타일링 목적임.
 
-- <p></p>
+- p 요소
 
   단락으로 만들어줌. 두번째 단락부터는 한 줄 띄고 나온다. 
 
-- <b></b> vs <strong></strong>
+- b 요소 vs strong 요소
 
-  둘 다 글자 진하게하는 효과 줌. <b>는 문자열을 단순히 굵게 표시하고 <strong>은 의미까지도 중요하다 전달.
+  둘 다 글자 진하게하는 효과 줌.  b요소는 문자열을 단순히 굵게 표시하고 strong 요소는 의미까지도 중요하다 전달.
 
-- <i></i> vs <em></em>
+- i 요소 vs em 요소
 
-  둘 다 글자 기울임 효과 줌. <i>는 단순히 기울이기만 하고 <em>은 의미까지도 중요하다 전달. 
-
- <a href = 'url'>
-
-<ul>, <li>
-
-<img>
-
-<iframe>
-
-<br>
-
-<table>, <thead>, <tbody>, <tr>, <th>, <td>
-
-<code>, <pre>
-
-### HTML 폼 관련 태그
-
-<form>
-
-<input> (type: text, checkbox, color, date, password...)
-
-<button>
-
-<textarea>
-
-<select>, <option>
-
-<b>, <font>, <center> 등은 권장하지 않는다 왜냐면..
+  둘 다 글자 기울임 효과 줌. i 요소는 단순히 기울이기만 하고 em 요소는 의미까지도 중요하다 전달. 
 
 
 
@@ -145,53 +117,53 @@ self-closing elements
 
 1. inline : HTML 특정 태그에 직접 style을 적용
 
-   ```
+   ```css
    <h1 style="color: red; fond-style: italic"> Hello world </h1>
    ```
 
 2. HTML 내부에 STYLESHEET작성
 
-   <style> 태그 이용
-
-   보통 <head> 태그 안에 넣음
+   &lt;style&gt; 요소 이용,  보통 &lt;head&gt; 안에 넣음
 
    ```html
    <!DOCTYPE html>
-   <html>
-       <head>
-           <style>
-               h1 {
-                   color: red;
-                   font-style: italic;
-               }
-           </style>
-       </head>
+      <html>
+          <head>
+              <style>
+                  h1 {
+                      color: red;
+                      font-style: italic;
+                  }
+              </style>
+          </head>
    ```
-
 
 
 
 3. HTML 외부에 STYLESHEET 작성
 
-   - css확장자로 별도의 stylesheet문서를 만들고 <link> 태그를 이용해 이 문서를 HTML 문서 안으로 불러오기. 
+   - css확장자로 별도의 stylesheet문서를 만들고 link 요소를 이용해 이 문서를 HTML 문서 안으로 불러온다. 
 
-     - 별도의 문서 css문서(.css)는 HTML 파일이 위치한 폴더나 그 하위 폴더에  저장되어있어야 함. 
+     - 별도의 문서 css문서(.css)는 HTML 파일이 위치한 폴더나 그 하위 폴더에  저장되어있어야 한다. 
 
-       1) css 파일이 html 파일과 동일한 폴더 안(=root directory)에 있는 경우
+
 
        ```
+       // css 파일이 html 파일과 동일한 폴더 안(=root directory)에 있는 경우
        <head>
          <link rel="stylesheet" href="main.css">
        </head>
        ```
 
        ```
+       // css 파일이 html 파일과 다른 폴더 안(=stylesheets)에 있는 경우
        <head>
          <link rel="stylesheet" href="stylesheets/main.css">
        </head>
        ```
 
-   - 스타일과 HTML은 분리가 되어야 좋음. 
+   - 스타일과 HTML은 분리가 되어야 좋다.
+
 
 ## CSS Resets 사용하기
 
@@ -206,8 +178,6 @@ CSS는 기존에 설정된 걸 지우고 재설정하게 해준다.
 ## HTML Event Attributes
 
 [w3schools events attributes reference](https://www.w3schools.com/tags/ref_eventattributes.asp)
-
-
 
 ```html
 <button onclick='myFunction()'>Click me</button>
@@ -227,7 +197,7 @@ CSS는 기존에 설정된 걸 지우고 재설정하게 해준다.
 
 1. 추가할 HTML 문서 내부에 직접 JS 코드 작성
 
-   - </head> 태그 전에 <script> element를 작성하고 그 안에 자바스크립트를 쓴다.
+   - &lt;/head&gt; 태그 전에 &lt;script&gt; element를 작성하고 그 안에 자바스크립트를 쓴다.
      - script 요소 안에 직접 작성한 자바스크립트 코드 = 인라인 자바스크립트 코드 
 
    ```html
@@ -265,7 +235,7 @@ CSS는 기존에 설정된 걸 지우고 재설정하게 해준다.
 
 
 
-* script 태그에 src 속성을 사용해 외부 js 문서를 불러왔다면, <script> 태그 안에 js 내용이 있어도 무시. HTML 5에서는 에러로로 간주한다.
+* script 태그에 src 속성을 사용해 외부 js 문서를 불러왔다면, &lt;script&gt; 태그 안에 js 내용이 있어도 무시. HTML 5에서는 에러로로 간주한다.
 * 로컬이 아닌 다른 도메인에 있는 js 파일을 가져올 수도 있다. 직접 관리하는 도메인이나 신뢰할 수 있는 곳에서 관리하는 도메인 파일만 유의해서 가져와야 한다.
 
   ```html
@@ -275,11 +245,11 @@ CSS는 기존에 설정된 걸 지우고 재설정하게 해준다.
 
 ### JS 추가 위치
 
-왜 추가 위치가 중요한가? 전통적으로, CSS파일이나 JS파일처럼 외부에서 참조하는 파일들을 한 곳에서 관리하기 위해  <script> 요소도 <head> 요소 안에 함께 넣어서 사용했다. 하지만 그럴 경우 JS 파일을 전부 내려받고, 파싱하고, 해석을 끝낼 때까지 <body> 안의 요소가 렌더링되지 않는다. 그래서 JS 파일을 불러올 동안 사용자는 텅 빈 화면만 보고 있어야 한다. 사용자가 페이지 로딩이 빠르다고 느낄 수 있도록 페이지 렌더링을 마친 뒤에 JS 코드를 처리하거나, JS코드와 페이지 렌더링을 동시에 처리하면 좋다.
+왜 추가 위치가 중요한가? 전통적으로, CSS파일이나 JS파일처럼 외부에서 참조하는 파일들을 한 곳에서 관리하기 위해  script 요소도 head 요소 안에 함께 넣어서 사용했다. 하지만 그럴 경우 JS 파일을 전부 내려받고, 파싱하고, 해석을 끝낼 때까지 body 안의 요소가 렌더링되지 않는다. 그래서 JS 파일을 불러올 동안 사용자는 텅 빈 화면만 보고 있어야 한다. 사용자가 페이지 로딩이 빠르다고 느낄 수 있도록 페이지 렌더링을 마친 뒤에 JS 코드를 처리하거나, JS코드와 페이지 렌더링을 동시에 처리하면 좋다.
 
--  <body> 요소 안에, 페이지 콘텐츠 마지막에 <script>를 쓴다. (= </body> 직전에 <script>를넣는다.)
-- <head> 요소 안에서 <script> 요소의 defer나 async 속성을 활용하여  js파일을 불러온다.
-  - defer는 문서의 콘텐츠를 완전히 파싱하고 표시할 때까지 스크립트 실행을 지연한다. <script> 요소가 <head>에 있더라도 브라우저가 </html>을 만날 때 실행되는 것이다. DOMContentLoaded 이벤트보다 먼저 실행된다.
+-  body 요소 안에, 페이지 콘텐츠 마지막에 script 요소를 쓴다. (= &lt;/body&gt; 직전에 &lt;script&gt;를넣는다.)
+- &lt;head&gt; 요소 안에서 script 요소의 defer나 async 속성을 활용하여  js파일을 불러온다.
+  - defer는 문서의 콘텐츠를 완전히 파싱하고 표시할 때까지 스크립트 실행을 지연한다. script 요소가 head 요소 안에 있더라도 브라우저가 "</html>"을 만날 때 실행되는 것이다. DOMContentLoaded 이벤트보다 먼저 실행된다.
   - async는 문서의 콘텐츠 파싱과 동시에 스크립트를 실행한다. 마크업 순서대로 실행된다는 보장이 없기에 로드 순서가 중요하다면 defer 속성을 써야한다. load 이벤트 전에 반드시 실행되지만 DOMContentLoaded 이벤트보다는 앞설 수도 그 이후일 수도 있다. (load이벤트와 DOMContentLoaded에 대한 추가 이해 필요)
   - defer와 async는 HTML5부터 명세화되었기에 이를 지원하는 브라우저에서만 사용 가능하다.
 
@@ -287,7 +257,8 @@ CSS는 기존에 설정된 걸 지우고 재설정하게 해준다.
 
 ### 브라우저가 JS를 지원하지 않는 경우
 
-- <noscript> 요소를 활용해 대체 콘텐츠를 노출시킬 수 있다. 아래 문서가 자바스크립트를 지원하지 않는 브라우져에서 불러와진다면 페이지에는 This page...로 시작하는 문단만 나온다. 
+- noscript 요소를 활용해 대체 콘텐츠를 노출시킬 수 있다. 아래 문서가 자바스크립트를 지원하지 않는 브라우져에서 불러와진다면 페이지에는 This page...로 시작하는 문단만 나온다. 
+
 
   ```html
   <!DOCTYPE html>
